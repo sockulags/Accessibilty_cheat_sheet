@@ -12,32 +12,32 @@
 9. [Testing Tools](#testing-tools)
 10. [Resources](#resources)
 
-## Introduction {#introduction}
+## Introduction <a name="introduction"></a>
 Description of the accessibility cheat sheet and its importance.
 
-## Semantic HTML {#semantic-html}
+## Semantic HTML <a name="semantic-html"></a>
 Guidelines on using semantic HTML elements.
 
-## Images {#images}
+## Images <a name="images"></a>
 Tips for making images accessible to screen readers.
 
-## Headings {#headings}
+## Headings <a name="headings"></a>
 Best practices for structuring headings.
 
-## Links {#links}
+## Links <a name="links"></a>
 Advice on creating accessible links.
 
-## Forms {#forms}
+## Forms <a name="forms"></a>
 How to make forms accessible.
 
-## Keyboard Navigation {#keyboard-navigation}
+## Keyboard Navigation <a name="keyboard-navigation"></a>
 Tips for ensuring keyboard accessibility.
 
-## Color Contrast {#color-contrast}
+## Color Contrast <a name="color-contrast"></a>
 Information on maintaining adequate color contrast for readability.
 
-## Testing Tools {#testing-tools}
+## Testing Tools <a name="testing-tools"></a>
 Recommended tools for testing accessibility.
 
-## Resources {#resources}
+## Resources <a name="resources"></a>
 Additional resources for learning more about web accessibility.
