@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Searchable Markdown</title>
+<link rel="stylesheet" href="github-markdown.css"/>
+<link rel="stylesheet" href="prism.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"></script>
+<script src="md.js"></script>
+<style>
+.markdown-body {
+    box-sizing: border-box;
+    min-width: 200px;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 45px;
+}
+
+@media (max-width: 767px) {
+    .markdown-body {
+        padding: 15px;
+    }
+}
+</style>
+</head>
+<body class="markdown-body">
+
+<input type="text" id="searchInput" placeholder="Search...">
+<button onclick="searchMarkdown()">Search</button>
+
+<div id="searchResults"></div>
+
+<script src="prism.js"></script>
+<script>
+ 
+ var markdownContent = accessibilityCheatSheet;
+
+
+// Convert Markdown to HTML
+var converter = new showdown.Converter();
+var htmlContent = converter.makeHtml(markdownContent);
+
+// Display Markdown content
+document.body.innerHTML += htmlContent;
+
+function searchMarkdown() {
+    var searchTerm = document.getElementById("searchInput").value.toLowerCase();
+    var searchResults = document.getElementById("searchResults");
+    searchResults.innerHTML = ""; // Clear previous results
+
+    var markdownSections = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p");
+    markdownSections.forEach(function(section) {
+        var sectionText = section.textContent.toLowerCase();
+        if (sectionText.includes(searchTerm)) {
+            var resultDiv = document.createElement("div");
+            resultDiv.innerHTML = "<p><strong>" + section.innerHTML + "</strong></p>";
+            searchResults.appendChild(resultDiv);
+        }
+    });
+}
+</script>
+
+</body>
+</html>
